@@ -1,16 +1,14 @@
+resource "aws_s3_bucket" "b" {
 
-terraform {
+   bucket = "delete-1010"
 
-    cloud {
 
-        organization = "ino"
+}
 
-        workspaces {
 
-            name = "abc"
 
-        }
-
-    }
-
+resource "aws_s3_bucket_object" "object" {
+  bucket = "delete-1010"
+  key    = "terraform.tfstate"
+  source = "C:/Users/pnarayana/Desktop/s33/terraform.tfstate"
 }
