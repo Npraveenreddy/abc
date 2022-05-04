@@ -1,14 +1,55 @@
-resource "aws_s3_bucket" "b" {
+resource "aws_s3_bucket" "onebucket" {
 
    bucket = "delete-1010"
 
+   acl = "private"
+
+   versioning {
+
+      enabled = true
+
+   }
+
+   tags = {
+
+     Name = "Bucket1"
+
+     Environment = "Test"
+
+   }
 
 }
 
 
 
-resource "aws_s3_bucket_object" "object" {
-  bucket = "delete-1010"
-  key    = "terraform.tfstate"
-  source = "C:/Users/pnarayana/Desktop/s33/terraform.tfstate"
+terraform {
+
+  #backend "s3" {
+
+    #bucket = "delete-1010"
+
+    #key    = "terraform.tfstate"
+
+    #region = "us-east-2"
+
+  #}
+
+#}
+
+
+
+#terraform {
+
+    cloud {
+
+        organization = "inno"
+
+        workspaces {
+
+            name = "abc"
+
+        }
+
+    }
+
 }
