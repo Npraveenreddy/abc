@@ -42,11 +42,11 @@ terraform {
 
     cloud {
 
-        organization = "inno"
+        organization = "ino"
 
         workspaces {
 
-            name = "abc"
+            name = "new"
 
         }
 
