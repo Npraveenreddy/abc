@@ -1,5 +1,2 @@
-provider "aws" {
-  region     = "us-east-2"
-  access_key = "AKIASUM6QXD3QEFKDD5F"
-  secret_key = "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"
-}
+  AWS_ACCESS_KEY_ID = var.AWS_ACCESS_KEY_ID
+  AWS_SECRET_ACCESS_KEY = var.AWS_SECRET_ACCESS_KEY
